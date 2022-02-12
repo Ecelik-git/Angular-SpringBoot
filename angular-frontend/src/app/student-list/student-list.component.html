@@ -1,1 +1,17 @@
-<p>student-list works!</p>
+<h2>Student List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> First Name </th>
+            <th> Last Name </th>
+            <th> Student Email </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students">
+            <td> {{ student.firstName }}</td>
+            <td> {{ student.lastName }}</td>
+            <td> {{ student.email }}</td>
+        </tr>
+    </tbody>
+</table>
