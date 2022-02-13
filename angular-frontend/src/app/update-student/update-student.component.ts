@@ -21,13 +21,14 @@ export class UpdateStudentComponent implements OnInit {
 
     this.studentService.getStudentById(this.id).subscribe(data =>{
       this.student = data
-    })
+    });
   }
 
   onSubmit(){
-    this.studentService.updateStudent(this.id, this.student).subscribe(data =>{
+    this.studentService.updateStudent(this.id, this.student).subscribe( _data =>{
       this.goToStudentList();
-    })
+    }
+    , error => console.log(error));
   }
 
   goToStudentList(){
